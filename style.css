@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(202, 86%, 94%);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/*Project Container*/
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+.project-container {
+  border: 1px solid black;
+  padding: 20px;
+  background-color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 10px;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 500px;
+}
+
+.project p {
+  text-decoration: underline;
+}
+form {
+  position: relative;
+}
+
+.project-input {
+  border: 1px solid hsl(61, 70%, 52%);
+  width: 250px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.Amount-button,
+.Amount {
+  position: absolute;
+  font-weight: 700;
+}
+
+.Amount-button {
+  font-size: 16px;
+  left: 0px;
+  top: 0;
+  background-color: hsl(61, 70%, 52%);
+  text-align: center;
+  height: 33px;
+  width: 40px;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.Amount {
+  left: 50px;
+  top: 10px;
+}
+.Amount-span {
+  margin-bottom: 50px;
+}
