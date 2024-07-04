@@ -1,7 +1,13 @@
+:root {
+  --background-color: hsl(202, 86%, 94%);
+  --primary-color: hsl(0, 0%, 100%);
+  --secondry-color: hsl(61, 70%, 52%);
+  --project-text: rgb(80, 76, 76);
+}
 body {
   margin: 0;
   padding: 0;
-  background-color: hsl(202, 86%, 94%);
+  background-color: var(--background-color);
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
@@ -11,13 +17,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 75vh;
+  height: 100vh;
 }
 
 .project-container {
-  border: 1px solid black;
   padding: 20px;
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--primary-color);
   border: none;
   border-radius: 10px;
 }
@@ -26,19 +31,28 @@ body {
   display: flex;
   align-items: center;
   gap: 2rem;
-  max-width: 500px;
+  width: 500px;
+}
+
+.project-text {
+  color: var(--project-text);
+  font-size: 16px;
 }
 
 .project p {
   text-decoration: underline;
 }
+
+/*Form*/
+
 form {
   position: relative;
 }
 
-.project-input {
-  border: 1px solid hsl(61, 70%, 52%);
-  width: 250px;
+.project-input,
+.second-input {
+  border: 1px solid var(--secondry-color);
+  width: 300px;
   padding: 8px;
   border-radius: 4px;
 }
@@ -63,8 +77,77 @@ form {
 }
 .Amount {
   left: 50px;
-  top: 10px;
+  top: 8px;
 }
 .Amount-span {
-  margin-bottom: 50px;
+  position: absolute;
+  right: 78%;
+  top: 6px;
+}
+
+/*First Input*/
+
+.input-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.first-input {
+  position: relative;
+}
+
+.input {
+  padding: 10px 20px;
+  border: 1px solid rgb(184, 177, 177);
+  border-radius: 5px;
+}
+.input-button {
+  position: absolute;
+  left: 0;
+  margin-top: 8px;
+  margin-left: 2px;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
+}
+
+.input-button-span {
+  position: absolute;
+  right: 0;
+  margin-top: 1px;
+  margin-bottom: 0px;
+  margin-right: 1px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: var(--background-color);
+  border: none;
+  font-size: 16px;
+  padding: 8px 10px;
+}
+
+/*Second-input*/
+.second-input {
+  display: flex;
+  flex-direction: column;
+}
+.second-input2 {
+  margin-top: 5px;
+}
+.second-input-button {
+  margin-top: 20px;
+  border: none;
+  padding: 10px 40px;
+  background-color: var(--secondry-color);
+  border-radius: 50px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.Calculator-icon {
+  text-align: center;
+  vertical-align: middle;
 }

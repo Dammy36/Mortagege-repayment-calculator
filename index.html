@@ -13,24 +13,57 @@
     />
   </head>
   <body>
-    <section class="container">
-      <div class="project-container">
-        <div class="project">
-          <h1>Mortagege Calculator</h1>
-          <p>Clear All</p>
-        </div>
-        <div>
-          <p>Montagege Amount</p>
-          <form>
-            <input type="text" class="project-input" />
-            <button class="Amount-button">$</button>
+    <div class="container">
+      <section>
+        <div class="project-container">
+          <div class="project">
+            <h1>Mortgage Calculator</h1>
+            <p>Clear All</p>
+          </div>
+          <div>
+            <p class="project-text">Mortgage Amount</p>
+            <form>
+              <input type="text" class="project-input" />
+              <button class="Amount-button">$</button>
 
-            <span class="Amount">300</span>
-            <span class="Amount-span">|</span>
-          </form>
+              <span class="Amount">300</span>
+              <span class="Amount-span">|</span>
+            </form>
+          </div>
+          <div class="input-section">
+            <div class="first-input">
+              <p class="project-text">Mortgage Terms</p>
+              <input type="text" class="input" />
+              <button class="input-button project-text">25</button>
+              <button class="input-button-span project-text">years</button>
+            </div>
+            <div class="first-input">
+              <p class="project-text">Intrest Rate</p>
+              <input type="text" class="input" />
+              <button class="input-button project-text">5.25</button>
+              <button class="input-button-span project-text">%</button>
+            </div>
+          </div>
+          <div>
+            <p>Mortgage Type</p>
+            <form>
+              <input type="text" class="second-input" />
+              <input type="text" class="second-input second-input2" />
+
+              <button class="second-input-button">
+                <img
+                  src="images/icon-calculator.svg"
+                  alt="Calculator-icon"
+                  class="Calculator-icon"
+                />
+                Calculator Repayments
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>
