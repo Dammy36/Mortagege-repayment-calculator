@@ -22,19 +22,23 @@ p {
   align-items: center;
   height: 100vh;
   position: relative;
+  margin-left: -100px;
 }
 
 .project-container {
   padding: 20px;
   background-color: var(--primary-color);
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  position: relative;
 }
 
 .project {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 5rem;
   width: 500px;
 }
 
@@ -47,29 +51,26 @@ p {
 }
 
 /*Form*/
-
-form {
-  position: relative;
+.project-input,
+.Amount-button {
+  margin-left: 20px;
 }
 
 .project-input,
 .second-input {
   border: 1px solid var(--secondry-color);
-  width: 300px;
+  min-width: 300px;
   padding: 8px;
   border-radius: 4px;
-}
-
-.Amount-button,
-.Amount {
-  position: absolute;
-  font-weight: 700;
+  flex: 1;
+  font-size: 12px;
 }
 
 .Amount-button {
+  position: absolute;
   font-size: 16px;
   left: 0px;
-  top: 0;
+  top: 29%;
   background-color: hsl(61, 70%, 52%);
   text-align: center;
   height: 33px;
@@ -77,15 +78,7 @@ form {
   border: none;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-}
-.Amount {
-  left: 50px;
-  top: 8px;
-}
-.Amount-span {
-  position: absolute;
-  right: 78%;
-  top: 6px;
+  font-weight: 700;
 }
 
 /*First Input*/
@@ -165,14 +158,28 @@ form {
   align-items: center;
   width: 400px;
   position: absolute;
-  right: 50px;
+  right: 11%;
   top: 55px;
 }
 .section-content {
-  padding: 20px;
+  padding: 1.4rem;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: hsl(202, 55%, 16%);
   text-align: center;
   color: white;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 70px;
+}
+.section__container-div {
+  padding: 5.1rem 2rem;
+}
+h2 {
+  font-size: 1rem;
+  letter-spacing: 1;
+}
+.section__container-div p {
+  font-size: 0.7rem;
+  color: hsl(203, 41%, 72%);
+  line-height: 1.5;
 }
