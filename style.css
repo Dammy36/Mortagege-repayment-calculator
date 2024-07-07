@@ -2,7 +2,8 @@
   --background-color: hsl(202, 86%, 94%);
   --primary-color: hsl(0, 0%, 100%);
   --secondry-color: hsl(61, 70%, 52%);
-  --project-text: rgb(80, 76, 76);
+  --project-text: rgb(68, 66, 66);
+  --p-text: rgb(180, 177, 177);
 }
 body {
   margin: 0;
@@ -10,8 +11,15 @@ body {
   background-color: var(--background-color);
   font-family: "Plus Jakarta Sans", sans-serif;
 }
+/*Typography*/
+
 p {
   font-size: 16px;
+  color: var(--project-text);
+}
+
+h1 {
+  color: var(--project-text);
 }
 
 /*Project Container*/
@@ -41,6 +49,9 @@ p {
   gap: 5rem;
   width: 500px;
 }
+.clear-project {
+  cursor: pointer;
+}
 
 .project-text {
   color: var(--project-text);
@@ -51,9 +62,9 @@ p {
 }
 
 /*Form*/
-.project-input,
-.Amount-button {
-  margin-left: 20px;
+.project-input {
+  margin-left: 35px;
+  margin-top: 2px;
 }
 
 .project-input,
@@ -69,7 +80,7 @@ p {
 .Amount-button {
   position: absolute;
   font-size: 16px;
-  left: 0px;
+  left: 19px;
   top: 29%;
   background-color: hsl(61, 70%, 52%);
   text-align: center;
@@ -96,7 +107,7 @@ p {
 }
 
 .input {
-  padding: 10px 10px;
+  padding: 8px;
   border: 1px solid rgb(184, 177, 177);
   border-radius: 5px;
 }
@@ -124,13 +135,14 @@ p {
   border-top-right-radius: 5px;
   background-color: var(--background-color);
   border: none;
-  padding: 10px 10px;
+  padding: 8px;
 }
 
 /*Second-input*/
 .second-input {
   display: flex;
   flex-direction: column;
+  min-width: 330px;
 }
 .second-input2 {
   margin-top: 5px;
@@ -159,7 +171,7 @@ p {
   width: 400px;
   position: absolute;
   right: 11%;
-  top: 55px;
+  top: 10%;
 }
 .section-content {
   padding: 1.4rem;
@@ -173,6 +185,7 @@ p {
 }
 .section__container-div {
   padding: 5.1rem 2rem;
+  display: none;
 }
 h2 {
   font-size: 1rem;
@@ -182,4 +195,35 @@ h2 {
   font-size: 0.7rem;
   color: hsl(203, 41%, 72%);
   line-height: 1.5;
+}
+
+/*Section paragraph*/
+
+.section__paragraph {
+  text-align: left;
+  padding: 1.2rem;
+}
+
+.section__paragraph-border {
+  border-top: var(--secondry-color);
+  border-radius: 4px;
+  background-color: hsl(201, 76%, 8%);
+  font-size: 14px;
+}
+.section__paragraph-contents {
+  padding: 1rem;
+}
+.p-text {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--p-text);
+}
+#p-text2 {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+#repayment {
+  font-size: 35px;
+  font-weight: 700;
+  color: var(--secondry-color);
 }

@@ -19,15 +19,13 @@
         <div class="project-container">
           <div class="project">
             <h1>Mortgage Calculator</h1>
-            <p>Clear All</p>
+            <p class="clear-project">Clear All</p>
           </div>
           <div>
             <p class="project-text">Mortgage Amount</p>
             <form>
-              <div class="form-input">
-                <input type="text" class="project-input" />
-                <button class="Amount-button">$</button>
-              </div>
+              <input type="text" class="project-input" />
+              <button class="Amount-button">$</button>
 
               <!---    <span class="Amount">300</span>
               <span class="Amount-span">|</span>
@@ -43,7 +41,7 @@
             <div class="first-input input-rate">
               <p class="project-text">Interest Rate</p>
               <input type="text" class="input" />
-              <button class="input-button project-text">5.25</button>
+              <button class="input-button project-text"></button>
               <button class="input-button-span project-text">%</button>
             </div>
           </div>
@@ -77,6 +75,23 @@
                 your monthly repayments would be.
               </p>
             </div>
+            <section class="section__paragraph">
+              <h2>Your results</h2>
+              <p class="p-text">
+                Your results are shown below based on the information you
+                provide. to adjusts the results. edit the form and click "
+                calculate repayments" again.
+              </p>
+              <div class="section__paragraph-border">
+                <div class="section__paragraph-contents">
+                  <p class="p-text">Your monthly repayments</p>
+                  <h2 id="repayment">$1,797.74</h2>
+                  <hr />
+                  <p class="p-text">Total you'll repay over the term</p>
+                  <p id="p-text2">$539,322.94</p>
+                </div>
+              </div>
+            </section>
           </section>
         </div>
       </section>
