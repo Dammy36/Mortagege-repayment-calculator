@@ -4,10 +4,16 @@
   --secondry-color: hsl(61, 70%, 52%);
   --project-text: rgb(68, 66, 66);
   --p-text: rgb(180, 177, 177);
+  --input-color: rgb(165, 165, 216);
 }
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
   background-color: var(--background-color);
   font-family: "Plus Jakarta Sans", sans-serif;
 }
@@ -28,7 +34,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   margin-left: -100px;
 }
@@ -47,7 +53,7 @@ h1 {
   display: flex;
   align-items: center;
   gap: 5rem;
-  width: 500px;
+  min-width: 500px;
 }
 .clear-project {
   cursor: pointer;
@@ -63,32 +69,33 @@ h1 {
 
 /*Form*/
 .project-input {
-  margin-left: 35px;
-  margin-top: 2px;
+  margin-left: 20px 0;
 }
 
 .project-input,
 .second-input {
-  border: 1px solid var(--secondry-color);
-  min-width: 300px;
-  padding: 8px;
+  border: 1px solid var(--input-color);
+  width: 350px;
+  padding: 10px;
   border-radius: 4px;
   flex: 1;
   font-size: 12px;
+  position: relative;
 }
 
 .Amount-button {
   position: absolute;
   font-size: 16px;
-  left: 19px;
-  top: 29%;
-  background-color: hsl(61, 70%, 52%);
+  left: 21px;
+  top: 28%;
+  margin-top: 2px;
+  background-color: var(--background-color);
   text-align: center;
   height: 33px;
   width: 40px;
   border: none;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
   font-weight: 700;
 }
 
@@ -108,11 +115,16 @@ h1 {
 
 .input {
   padding: 8px;
-  border: 1px solid rgb(184, 177, 177);
+  border: 1px solid var(--input-color);
   border-radius: 5px;
+  width: 170px;
+}
+
+.input:focus {
+  border-color: lawngreen;
 }
 .input-rate {
-  margin-right: 30%;
+  margin-right: 50%;
 }
 .input-button {
   position: absolute;
@@ -122,7 +134,6 @@ h1 {
   font-size: 16px;
   border: none;
   background-color: transparent;
-  font-weight: 700;
 }
 
 .input-button-span {
@@ -136,13 +147,16 @@ h1 {
   background-color: var(--background-color);
   border: none;
   padding: 8px;
+  font-weight: 500;
+}
+.input-3 {
+  margin-top: 20px;
 }
 
 /*Second-input*/
 .second-input {
   display: flex;
   flex-direction: column;
-  min-width: 330px;
 }
 .second-input2 {
   margin-top: 5px;
@@ -171,7 +185,7 @@ h1 {
   width: 400px;
   position: absolute;
   right: 11%;
-  top: 10%;
+  top: 9.5%;
 }
 .section-content {
   padding: 1.4rem;
@@ -187,6 +201,7 @@ h1 {
   padding: 5.1rem 2rem;
   display: none;
 }
+
 h2 {
   font-size: 1rem;
   letter-spacing: 1;
@@ -201,22 +216,37 @@ h2 {
 
 .section__paragraph {
   text-align: left;
-  padding: 1.2rem;
+
+  padding-top: 1rem;
+  padding-bottom: 1.8rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
+.section__paragraph h2 {
+  padding-bottom: 15px;
+}
 .section__paragraph-border {
-  border-top: var(--secondry-color);
   border-radius: 4px;
   background-color: hsl(201, 76%, 8%);
   font-size: 14px;
 }
+
+.section__paragraph-border-2 {
+  border-radius: 5px;
+  border-top: 3px solid var(--secondry-color);
+  margin-top: 30px;
+}
+
 .section__paragraph-contents {
   padding: 1rem;
 }
+
 .p-text {
   font-size: 12px;
   line-height: 1.4;
   color: var(--p-text);
+  margin-top: 20px;
 }
 #p-text2 {
   color: var(--primary-color);
@@ -225,5 +255,10 @@ h2 {
 #repayment {
   font-size: 35px;
   font-weight: 700;
+  line-height: 0.5;
   color: var(--secondry-color);
+}
+hr {
+  opacity: 0.5;
+  height: 1px;
 }
