@@ -40,22 +40,23 @@ h1 {
 }
 
 .project-container {
-  padding: 20px;
+  padding: 18px;
   background-color: var(--primary-color);
   border: none;
   border-radius: 20px;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
   position: relative;
+  min-width: 500px;
 }
 
 .project {
   display: flex;
   align-items: center;
   gap: 5rem;
-  min-width: 500px;
   color: var(--project-text);
 }
+
 .clear-project {
   cursor: pointer;
 }
@@ -99,11 +100,10 @@ h1 {
   margin-top: 1px;
   background-color: var(--background-color);
   text-align: center;
-  padding: 10px 13px;
+  padding: 10px 15px;
   border: none;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
-
   z-index: 1;
   transform: translate(-50%);
   pointer-events: none;
@@ -135,16 +135,6 @@ h1 {
   margin-right: 50%;
 }
 
-.input-button {
-  position: absolute;
-  left: 0;
-  margin-top: 8px;
-  margin-left: 2px;
-  font-size: 16px;
-  border: none;
-  background-color: transparent;
-}
-
 .input-button-span {
   position: absolute;
   right: 0;
@@ -158,6 +148,7 @@ h1 {
   padding: 11px 10px;
   font-weight: 600;
   text-align: center;
+  overflow: hidden;
 }
 .input-3 {
   margin-top: 20px;
@@ -176,7 +167,6 @@ h1 {
 /*Second-input*/
 .second-input {
   display: flex;
-
   flex-direction: column;
   padding-left: 60px;
   font-size: 15px;
@@ -206,16 +196,14 @@ h1 {
 /*Section Container*/
 
 .section-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   max-width: 400px;
   position: absolute;
   right: 11%;
-  top: 7%;
+  top: 0;
 }
+
 .section-content {
-  padding: 1.4rem;
+  padding: 1.9rem;
   border: none;
   border-radius: 20px;
   background-color: hsl(202, 55%, 16%);
@@ -223,10 +211,12 @@ h1 {
   color: white;
   border-top-left-radius: 0;
   border-bottom-left-radius: 70px;
+  display: block;
 }
+
 .section__container-div {
   padding: 5.1rem 2rem;
-  display: block;
+  display: none;
 }
 
 h2 {
@@ -243,11 +233,12 @@ h2 {
 
 .section__paragraph {
   text-align: left;
-  display: none;
-  padding-top: 1rem;
-  padding-bottom: 1.8rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 1.5rem;
+  display: block;
+}
+
+.open {
+  display: block;
 }
 
 .section__paragraph h2 {
@@ -288,4 +279,67 @@ h2 {
 hr {
   opacity: 0.5;
   height: 1px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    justify-content: left;
+    min-height: 10vh;
+    margin: 0;
+  }
+
+  .project-container {
+    padding: 20px;
+    border-radius: 0;
+  }
+
+  .project-mortgage {
+    margin-top: 20px;
+  }
+
+  .project {
+    display: block;
+    gap: 1rem;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  .project-input,
+  .second-input {
+    width: 300px;
+  }
+
+  .input-section {
+    display: block;
+  }
+
+  .input-button-span {
+    right: 0;
+    top: 48%;
+    padding: 11px 15px;
+  }
+
+  .section-container {
+    right: 0;
+    top: 100%;
+    margin-top: 20px;
+  }
+
+  .section-content {
+    padding: 1rem;
+    border-radius: 0;
+  }
+
+  .section__paragraph {
+    padding: 8px;
+  }
+  .section__paragraph h2 {
+    font-size: 1.5rem;
+    letter-spacing: 1;
+    padding-bottom: 0;
+  }
+
+  .p-text {
+    font-size: 15px;
+  }
 }
