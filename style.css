@@ -94,13 +94,19 @@ h1 {
   border-color: var(--secondry-color);
 }
 
+.input-container {
+  position: relative;
+  display: inline-block;
+}
+
 .Amount-button {
   position: absolute;
-  left: 39px;
-  margin-top: 1px;
+  height: 100%;
+  left: 19px;
+  top: 0;
   background-color: var(--background-color);
   text-align: center;
-  padding: 10px 15px;
+  padding: 0 15px;
   border: none;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -202,6 +208,10 @@ h1 {
   top: 0;
 }
 
+.section-container-image {
+  margin-bottom: 50px;
+}
+
 .section-content {
   padding: 1.9rem;
   border: none;
@@ -211,12 +221,11 @@ h1 {
   color: white;
   border-top-left-radius: 0;
   border-bottom-left-radius: 70px;
-  display: block;
 }
 
 .section__container-div {
-  padding: 5.1rem 2rem;
-  display: none;
+  padding: 3.8rem 2rem;
+  display: ;
 }
 
 h2 {
@@ -233,12 +242,9 @@ h2 {
 
 .section__paragraph {
   text-align: left;
-  padding: 1.5rem;
-  display: block;
-}
+  padding: 1rem;
 
-.open {
-  display: block;
+  display: none;
 }
 
 .section__paragraph h2 {
@@ -253,7 +259,6 @@ h2 {
 .section__paragraph-border-2 {
   border-radius: 5px;
   border-top: 3px solid var(--secondry-color);
-  margin-top: 30px;
 }
 
 .section__paragraph-contents {

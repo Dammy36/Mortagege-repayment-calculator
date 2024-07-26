@@ -29,6 +29,7 @@
             <p class="project-text">Mortgage Amount</p>
             <form class="input-container">
               <button class="Amount-button">£</button>
+
               <input type="text" class="project-input" />
             </form>
           </div>
@@ -58,7 +59,7 @@
                 <i class="fa-regular fa-circle"></i>
               </div>
 
-              <button class="second-input-button">
+              <button class="second-input-button" onclick="buttonClick()">
                 <img
                   src="images/icon-calculator.svg"
                   alt="Calculator-icon"
@@ -71,32 +72,39 @@
         </div>
         <div class="container section-container">
           <section class="section-content">
-            <div class="section__container-div">
-              <img
-                src="images/illustration-empty.svg"
-                alt="illustration-image"
-              />
-              <h2>Results shown here</h2>
-              <p>
-                Complete the form and click "calculate repayment" to see what
-                your monthly repayments would be.
-              </p>
+            <div class="section__container-div" id="border-A">
+              <div class="section-container-image">
+                <img
+                  src="images/illustration-empty.svg"
+                  alt="illustration-image"
+                />
+                <h2>Results shown here</h2>
+                <p>
+                  Complete the form and click "calculate repayment" to see what
+                  your monthly repayments would be.
+                </p>
+              </div>
             </div>
-            <div class="section__paragraph">
-              <h2>Your results</h2>
-              <p class="p-text">
-                Your results are shown below based on the information you
-                provide. to adjusts the results. edit the form and click "
-                calculate repayments" again.
-              </p>
-              <div class="section__paragraph-border-2">
-                <div class="section__paragraph-border">
-                  <div class="section__paragraph-contents">
-                    <p class="p-text">Your monthly repayments</p>
-                    <h2 id="repayment">£1,797.74</h2>
-                    <hr />
-                    <p class="p-text">Total you'll repay over the term</p>
-                    <p id="p-text2">£539,322.94</p>
+            <div
+              class="section__paragraph section__container-div"
+              id="border-B"
+            >
+              <div class="section-container-image">
+                <h2>Your results</h2>
+                <p class="p-text">
+                  Your results are shown below based on the information you
+                  provide. to adjusts the results. edit the form and click "
+                  calculate repayments" again.
+                </p>
+                <div class="section__paragraph-border-2">
+                  <div class="section__paragraph-border">
+                    <div class="section__paragraph-contents">
+                      <p class="p-text">Your monthly repayments</p>
+                      <h2 id="repayment">£1,797.74</h2>
+                      <hr />
+                      <p class="p-text">Total you'll repay over the term</p>
+                      <p id="p-text2">£539,322.94</p>
+                    </div>
                   </div>
                 </div>
               </div>
