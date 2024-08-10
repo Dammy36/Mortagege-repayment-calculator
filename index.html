@@ -19,8 +19,8 @@
   </head>
   <body>
     <div class="container">
-      <section>
-        <div class="project-container">
+      <section class="container-2">
+        <div class="project-container input-container">
           <div class="project">
             <h1>Mortgage Calculator</h1>
             <p class="clear-project">Clear All</p>
@@ -28,21 +28,42 @@
           <div class="project-mortgage">
             <p class="project-text">Mortgage Amount</p>
             <form class="input-container">
-              <button class="Amount-button">£</button>
+              <button
+                type="button"
+                class="Amount-button"
+                id="input-pound-button"
+                onclick="valiadateButton(this)"
+              >
+                £
+              </button>
 
-              <input type="text" class="project-input" />
+              <input type="text" id="input1" class="project-input" />
             </form>
           </div>
           <div class="input-section input-rate">
             <div class="first-input">
               <p class="project-text">Mortgage Terms</p>
               <input type="text" class="input" />
-              <button class="input-button-span project-text">years</button>
+              <button
+                class="input-button-span project-text"
+                type="button"
+                id="input-button"
+                onclick="valiadateButton(this)"
+              >
+                years
+              </button>
             </div>
             <div class="first-input input-rate">
               <p class="project-text">Interest Rate</p>
-              <input type="text" class="input" />
-              <button class="input-button-span project-text">%</button>
+              <input type="text" class="input" id="years" />
+              <button
+                class="input-button-span project-text"
+                type="button"
+                id="years-button"
+                onclick="valiadateButton(this)"
+              >
+                %
+              </button>
             </div>
           </div>
           <div class="input-3">
@@ -59,7 +80,11 @@
                 <i class="fa-regular fa-circle"></i>
               </div>
 
-              <button class="second-input-button" onclick="buttonClick()">
+              <button
+                type="button"
+                class="second-input-button"
+                onclick="inputElements();"
+              >
                 <img
                   src="images/icon-calculator.svg"
                   alt="Calculator-icon"
@@ -70,7 +95,7 @@
             </form>
           </div>
         </div>
-        <div class="container section-container">
+        <div class="section-container">
           <section class="section-content">
             <div class="section__container-div" id="border-A">
               <div class="section-container-image">
@@ -100,10 +125,10 @@
                   <div class="section__paragraph-border">
                     <div class="section__paragraph-contents">
                       <p class="p-text">Your monthly repayments</p>
-                      <h2 id="repayment">£1,797.74</h2>
+                      <h2 id="repayment">£ 0.00</h2>
                       <hr />
                       <p class="p-text">Total you'll repay over the term</p>
-                      <p id="p-text2">£539,322.94</p>
+                      <p id="totalPayment">£539,322.94</p>
                     </div>
                   </div>
                 </div>

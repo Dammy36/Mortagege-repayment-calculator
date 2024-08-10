@@ -13,7 +13,7 @@
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
+  max-width: 100%;
   background-color: var(--background-color);
   font-family: "Plus Jakarta Sans", sans-serif;
 }
@@ -31,13 +31,19 @@ h1 {
 /*Project Container*/
 
 .container {
+  position: relative;
+  margin-left: -100px;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  position: relative;
-  margin-left: -100px;
 }
+
+/*.container-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}*/
 
 .project-container {
   padding: 18px;
@@ -48,6 +54,20 @@ h1 {
   border-top-right-radius: 0;
   position: relative;
   min-width: 500px;
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+  flex: 1;
+}
+
+input {
+  flex: 1 1 100px;
+  box-sizing: border-box;
+  width: 100%;
+  cursor: pointer;
+  height: auto;
 }
 
 .project {
@@ -70,22 +90,27 @@ h1 {
 }
 
 /*Form*/
+
+.project-input {
+  width: 75%;
+}
+
+.project-input:hover {
+  background-color: var(--project-color);
+}
 .project-input,
 .Amount-button,
 .input {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
 }
 
 .project-input,
 .second-input {
   border: 1px solid var(--input-color);
-  width: 350px;
   padding: 10px;
   border-radius: 4px;
-  flex: 1;
   outline: none;
-  padding-left: 60px;
   position: relative;
 }
 
@@ -101,12 +126,12 @@ h1 {
 
 .Amount-button {
   position: absolute;
-  height: 100%;
-  left: 19px;
-  top: 0;
+  left: 20px;
+  margin-top: 1px;
+  margin-bottom: 0px;
   background-color: var(--background-color);
   text-align: center;
-  padding: 0 15px;
+  padding: 10px 15px;
   border: none;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -125,6 +150,15 @@ h1 {
   gap: 15px;
 }
 
+input.error {
+  border-color: red;
+}
+
+.error-message {
+  border-color: red;
+  font-size: 0.5rem;
+  margin-top: 10px;
+}
 .first-input {
   position: relative;
 }
@@ -179,6 +213,12 @@ h1 {
   font-weight: 700;
   background-color: transparent;
   color: var(--project-text);
+  width: 75%;
+  cursor: pointer;
+}
+
+.second-input:hover {
+  border-color: var(--secondry-color);
 }
 .second-input2 {
   margin-top: 5px;
@@ -192,6 +232,10 @@ h1 {
   border-radius: 50px;
   text-align: center;
   font-weight: 700;
+  cursor: pointer;
+}
+.second-input-button:hover {
+  background-color: hsl(61, 82%, 75%);
 }
 
 .Calculator-icon {
@@ -201,13 +245,13 @@ h1 {
 
 /*Section Container*/
 
-.section-container {
+/*.section-container {
   max-width: 400px;
   position: absolute;
   right: 11%;
-  top: 0;
+  top: 50px;
 }
-
+*/
 .section-container-image {
   margin-bottom: 50px;
 }
@@ -225,7 +269,6 @@ h1 {
 
 .section__container-div {
   padding: 3.8rem 2rem;
-  display: ;
 }
 
 h2 {
@@ -271,7 +314,7 @@ h2 {
   color: var(--p-text);
   margin-top: 20px;
 }
-#p-text2 {
+#totalPayment {
   color: var(--primary-color);
   font-weight: 700;
 }
@@ -286,11 +329,13 @@ hr {
   height: 1px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 900px) {
+  body {
+    background-color: #ffff;
+  }
   .container {
-    justify-content: left;
-    min-height: 10vh;
-    margin: 0;
+    flex-direction: column;
+    height: auto;
   }
 
   .project-container {
@@ -298,7 +343,7 @@ hr {
     border-radius: 0;
   }
 
-  .project-mortgage {
+  /* .project-mortgage {
     margin-top: 20px;
   }
 
@@ -346,5 +391,5 @@ hr {
 
   .p-text {
     font-size: 15px;
-  }
+  }*/
 }
