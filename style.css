@@ -58,8 +58,11 @@ h1 {
 
 .input-container {
   display: flex;
+  align-items: center;
   width: 100%;
   flex: 1;
+  gap: 5px;
+  position: relative;
 }
 
 input {
@@ -93,6 +96,7 @@ input {
 
 .project-input {
   width: 75%;
+  flex: 1;
 }
 
 .project-input:hover {
@@ -150,14 +154,14 @@ input {
   gap: 15px;
 }
 
-input.error {
-  border-color: red;
-}
-
 .error-message {
-  border-color: red;
+  color: red;
   font-size: 0.5rem;
   margin-top: 10px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
 }
 .first-input {
   position: relative;
@@ -192,6 +196,11 @@ input.error {
 }
 .input-3 {
   margin-top: 20px;
+}
+
+.text-below-error {
+  margin-top: 10px;
+  transition: margin-top 0.3s ease;
 }
 
 .input-3__icon {
@@ -245,13 +254,13 @@ input.error {
 
 /*Section Container*/
 
-/*.section-container {
+.section-container {
   max-width: 400px;
   position: absolute;
   right: 11%;
   top: 50px;
 }
-*/
+
 .section-container-image {
   margin-bottom: 50px;
 }

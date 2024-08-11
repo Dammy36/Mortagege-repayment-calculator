@@ -27,46 +27,50 @@
           </div>
           <div class="project-mortgage">
             <p class="project-text">Mortgage Amount</p>
-            <form class="input-container">
-              <button
-                type="button"
-                class="Amount-button"
-                id="input-pound-button"
-                onclick="valiadateButton(this)"
-              >
-                £
-              </button>
+            <div>
+              <form class="input-container">
+                <button
+                  type="button"
+                  class="Amount-button"
+                  id="principal-button"
+                >
+                  £
+                </button>
 
-              <input type="text" id="input1" class="project-input" />
-            </form>
+                <input type="text" class="project-input" id="principal" />
+              </form>
+            </div>
           </div>
+
           <div class="input-section input-rate">
             <div class="first-input">
               <p class="project-text">Mortgage Terms</p>
-              <input type="text" class="input" />
-              <button
-                class="input-button-span project-text"
-                type="button"
-                id="input-button"
-                onclick="valiadateButton(this)"
-              >
-                years
-              </button>
+              <form>
+                <input type="text" class="input" id="annualInterestRate" />
+                <button
+                  class="input-button-span project-text"
+                  type="button"
+                  id="annualinterest-button"
+                >
+                  years
+                </button>
+              </form>
             </div>
             <div class="first-input input-rate">
               <p class="project-text">Interest Rate</p>
-              <input type="text" class="input" id="years" />
-              <button
-                class="input-button-span project-text"
-                type="button"
-                id="years-button"
-                onclick="valiadateButton(this)"
-              >
-                %
-              </button>
+              <form>
+                <input type="text" class="input" id="years" />
+                <button
+                  class="input-button-span project-text"
+                  type="button"
+                  id="years-button"
+                >
+                  %
+                </button>
+              </form>
             </div>
           </div>
-          <div class="input-3">
+          <div class="input-3 text-below-error">
             <p>Mortgage Type</p>
             <form>
               <div class="input-3__icon">
@@ -83,7 +87,7 @@
               <button
                 type="button"
                 class="second-input-button"
-                onclick="inputElements();"
+                id="second-button"
               >
                 <img
                   src="images/icon-calculator.svg"
