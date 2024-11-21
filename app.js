@@ -152,3 +152,18 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 });
+
+//To clear all inputs
+function clearInput() {
+  const form = document.querySelectorAll("#form");
+  form.forEach((form) => {
+    const inputs = form.querySelectorAll("input");
+    inputs.forEach((input) => {
+      if (input.type === "text") {
+        input.value = "";
+      } else if (input.type === "radio") {
+        input.checked = false;
+      }
+    });
+  });
+}

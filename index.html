@@ -23,12 +23,14 @@
         <div class="project-container input-container">
           <div class="project">
             <h1>Mortgage Calculator</h1>
-            <p class="clear-project">Clear All</p>
+            <button type="button" class="clear-project" onclick="clearInput()">
+              Clear All
+            </button>
           </div>
           <div class="project-mortgage">
             <p class="project-text">Mortgage Amount</p>
             <div>
-              <form class="input-container">
+              <form class="input-container" id="form">
                 <button
                   type="button"
                   class="Amount-button"
@@ -45,7 +47,7 @@
           <div class="input-section input-rate">
             <div class="first-input">
               <p class="project-text">Mortgage Terms</p>
-              <form>
+              <form id="form">
                 <input type="text" class="input" id="annualInterestRate" />
                 <button
                   class="input-button-span project-text"
@@ -58,7 +60,7 @@
             </div>
             <div class="first-input input-rate">
               <p class="project-text">Interest Rate</p>
-              <form>
+              <form id="form">
                 <input type="text" class="input" id="years" />
                 <button
                   class="input-button-span project-text"
@@ -72,7 +74,7 @@
           </div>
           <div class="input-3 text-below-error">
             <p>Mortgage Type</p>
-            <form>
+            <form id="form">
               <div class="input-3__icon">
                 <button class="second-input">
                   <span class="radio-span">Repayment</span>
